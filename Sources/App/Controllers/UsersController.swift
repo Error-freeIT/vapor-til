@@ -5,7 +5,7 @@ struct UsersController: RouteCollection {
         let usersRoute = router.grouped("api", "users")
         // Get all users.
         usersRoute.get(use: getAllHandler)
-        // Add new user.
+        // Add new user. (/api/users)
         usersRoute.post(User.self, use: createHandler)
         // Get user with ID equal to URL parameter.
         usersRoute.get(User.parameter, use: getHandler)
